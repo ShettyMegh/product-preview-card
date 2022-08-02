@@ -201,16 +201,16 @@
 <body>
 
   <main>
-    <div role="product" class="product">
-      <div role="img" class="product__left">
+    <div role="banner" class="product">
+      <div class="product__left">
         <picture>
           <source media="(max-width:650px)" srcset="./images/image-product-mobile.jpg">
-          <img src="./images/image-product-desktop.jpg" alt="Perfume">
+          <img role="img" src="./images/image-product-desktop.jpg" alt="Perfume">
         </picture>
       </div>
   
       <div role="column" class="product__right">
-        <p role="contentinfo" class="product__type">perfume</p>
+        <p class="product__type">perfume</p>
         <h2 role="columnheader" class="product__title">
           Gabrielle Essence Eau De Parfum
         </h2>
@@ -218,7 +218,7 @@
           A floral, solar and voluptuous interpretation composed by Olivier Polge, 
           Perfumer-Creator for the House of CHANEL.
         </p>
-        <div role="contentinfo" class="product__price">
+        <div class="product__price">
           <span class="product__offer">$149.99</span>
           <span class="product__original">$169.99</span>
   
