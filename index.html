@@ -35,7 +35,7 @@
       display: flex;
       flex-direction: row;
       width: 750px;
-      height: 58vh;
+      height: auto;
       border-radius: 15px;
       background-color: white;
     }
@@ -115,9 +115,8 @@
 
     @media (max-width:650px){
       body{
-      display: block;
+      display: flex;
       height: 100vh;
-      background-color: hsl(0, 0%, 90%);
     }
 
     .product{
@@ -145,8 +144,7 @@
     .product__type{
       text-transform: uppercase;
       letter-spacing: 3px;
-      color: rgb(139, 139, 139);
-      font-size: 10px;
+      font-size: 12px;
     }
 
     .product__title{
@@ -154,9 +152,7 @@
     }
 
     .product__desc{
-      color:hsl(0, 0%, 54%);
       line-height: 20px;
-      font-size: 14px;
     }
 
     .product__price{
@@ -164,27 +160,16 @@
       align-items: center;
     }
 
-    .product__price .product__offer, .product__price .product__original{
-      color: hsl(158, 36%, 37%);
-    }
-
     .product__price .product__offer{
-      font-family: 'Fraunces', serif;
       font-size: 1.5rem;
     }
     .product__price .product__original{
-      text-decoration: line-through;
       font-size: 0.8rem;
       margin-left: 0.8rem;
     }
 
     .product__button{
-      text-align: center;
       padding: 10px 20px;
-      background-color: hsl(158, 36%, 37%);
-      border: 0px;
-      border-radius: 10px;
-      color: white;
       font-size: 15px;
       cursor: pointer;
     }
@@ -202,26 +187,29 @@
 </head>
 <body>
 
-  <div class="product">
-    <div class="product__left"></div>
-
-    <div class="product__right">
-      <p class="product__type">perfume</p>
-      <h2 class="product__title">
-        Gabrielle Essence Eau De Parfum
-      </h2>
-      <p class="product__desc">
-        A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-        Perfumer-Creator for the House of CHANEL.
-      </p>
-      <div class="product__price">
-        <span class="product__offer">$149.99</span>
-        <span class="product__original">$169.99</span>
-
+  <main role="main">
+    <div role="product" class="product">
+      <div role="left" class="product__left"></div>
+  
+      <div role="right" class="product__right">
+        <p role="type" class="product__type">perfume</p>
+        <h2 role="title" class="product__title">
+          Gabrielle Essence Eau De Parfum
+        </h2>
+        <p role="description" class="product__desc">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div role="price" class="product__price">
+          <span role="current price" class="product__offer">$149.99</span>
+          <span role="original price" class="product__original">$169.99</span>
+  
+        </div>
+        <button role="add to cart button" class="product__button"> <span><img src="./images/icon-cart.svg" alt=""></span>  Add to Cart</button>
       </div>
-      <button class="product__button"> <span><img src="./images/icon-cart.svg" alt=""></span>  Add to Cart</button>
     </div>
-  </div>
+  </main>
+  
 
 </body>
 </html>
